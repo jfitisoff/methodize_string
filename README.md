@@ -40,3 +40,8 @@ require 'methodize_string'
 ''.methodize!
 ArgumentError: Unable to convert string to a method string: ''
 ```
+
+## Limitations
+- English only.
+- Limited support for numbers in strings.
+- No support for things like currency codes, etc., at the moment.

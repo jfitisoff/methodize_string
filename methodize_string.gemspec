@@ -24,6 +24,6 @@ Gem::Specification.new do |s|
     "lib/methodize_string/string.rb",
     "lib/methodize_string/version.rb"
   ]
-  s.homepage    = 'https://rubygems.org/gems/methodize_string'
+  s.homepage    = 'https://github.com/jfitisoff/methodize_string'
   s.license     = 'MIT'
 end

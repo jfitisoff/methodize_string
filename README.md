@@ -7,7 +7,7 @@ String#methodize
 
 String.methodize!
 
-Basic examples:
+##Basic usage:
 ```ruby
 require 'methodize_string'
 
@@ -18,24 +18,25 @@ require 'methodize_string'
 => "continue_reading"
 ```
 
-Accented character handling:
+##Accented character handling:
 ```ruby
-# By default, accented characters will be converted.
+# By default, accented characters will be converted to non-accented characters.
 "Ä Ö Ü".methodize
 => "a_o_u"
 
-# But if you want the accented chars you can do this.
+# But this behavior can be overridden.
 "Ä Ö Ü".methodize(transliterate: false)
 => "ä_ö_ü"
 ```
 
-Error handling:
+##Error handling:
 ```ruby
-# Non-bang method will return nil if the string can't be converted.
+# The non-bang method won't raise an error. It will just return nil if the string
+# can't be converted.
 ''.methodize
 => nil
 
-# Bang method raises an ArgumentError if the string can't be converted.
+# The bang method raises an ArgumentError in cases where the string can't be converted.
 ''.methodize!
 ArgumentError: Unable to convert string to a method string: ''
 ```
